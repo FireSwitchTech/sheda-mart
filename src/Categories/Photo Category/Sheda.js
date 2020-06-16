@@ -9,8 +9,11 @@ import Reflector from './img/reflector.jpg'
 import Rebel from './img/cam8.jpg'
 import Lens from './img/lens1.jpg'
 import Light from './img/light.jpg'
+import Navbar from '../../navbar/navbar.js'
 function Sheda() {
     return(
+      <div>
+      <Navbar/>
         <div>
      <h1 id="headcat">Photo<span id="graphy">graphy</span></h1>
     <div class="container-fluid">
@@ -97,6 +100,7 @@ function Sheda() {
     </div>
 
             
+        </div>
         </div>
     )
 }
