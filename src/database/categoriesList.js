@@ -1,7 +1,7 @@
 const categoriesList =[
     {
         id:1,
-        category_name:"Photgraphy/Cinematography"
+        category_name:"Photography"
     },
     {
         id:2,
@@ -17,26 +17,6 @@ const categoriesList =[
     },
     {
         id:5,
-        category_name:"Publishing"
-    },
-    {
-        id:6,
-        category_name:"Writing"
-    },
-    {
-        id:7,
-        category_name:"Games"
-    },
-    {
-        id:8,
-        category_name:"Music"
-    },
-    {
-        id:9,
-        category_name:"Architecture"
-    },
-    {
-        id:10,
         category_name:"Arts and Craft"
     },
 ]
