@@ -1,33 +1,23 @@
-
 const categoriesList =[
     {
         id:1,
-        category_name:"Photography",
-        img_url:require('../img/P5.jpeg'),
-        url:"/categories/photography"
+        category_name:"Photgraphy/Cinematography"
     },
     {
         id:2,
-        category_name:"Graphic Design",
-        img_url:require('../img/cam5.jpg'),
-        url:"/categories/graphics-design"
+        category_name:"Graphic Design"
     },
     {
         id:3,
-        category_name:"Technology",
-        img_url:require('../img/tech.jpg'),
-        url:"/categories/technology"
-
+        category_name:"Technology"
     },
     {
         id:4,
-        category_name:"Music",
-        img_url:require('../img/music.jpg'),
+        category_name:"Animations"
     },
     {
         id:5,
-        category_name:"Publishing",
-        img_url:require('../img/graphic.jfif'),
+        category_name:"Publishing"
     },
     {
         id:6,
@@ -38,10 +28,17 @@ const categoriesList =[
         category_name:"Games"
     },
     {
-        id:7,
+        id:8,
+        category_name:"Music"
+    },
+    {
+        id:9,
+        category_name:"Architecture"
+    },
+    {
+        id:10,
         category_name:"Arts and Craft"
     },
-    
 ]
 
 export default categoriesList
