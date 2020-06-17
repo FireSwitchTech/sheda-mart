@@ -1,0 +1,19 @@
+#headcat{
+    margin-left: 95px;
+    padding: 25px;
+}
+#orange{
+    
+    border: transparent 0px  !important;
+    background-color: orange !important;  
+    margin-right:10px !important;
+}
+#orange :hover{
+    border-color: black !important;
+}
+#graphy{
+    color: orange;
+}
+.btn-primary{
+    border-color: transparent!important;
+}

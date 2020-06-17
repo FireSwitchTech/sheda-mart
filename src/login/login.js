@@ -38,7 +38,7 @@ function login(){
 				<p>OR</p>
 				<button type="submit" class="btn1">CONNECT WITH FACEBOOK</button>
 				<p>New to Sheda Mart?</p>
-				<p class=
+				<p class="me">CREATE AN ACCOUNT</p>
                 </div>
         </form>
       </div>
