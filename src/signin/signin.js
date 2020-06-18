@@ -1,22 +1,32 @@
-import React from 'react'
+import React,{Component} from 'react'
+import {Link,withRouter} from 'react-router-dom'
 import './Style.css'
+import Modal from 'react-bootstrap/Modal'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import Login from '../login/login'
 
 
-function Signin(){
+class Signin extends Component {
+   state = {
+     show:false
+   }
+
+     showModal =()=>{
+       this.setState({
+         show:true
+       })
+     }
+     hideModal=()=>{
+       this.SetState({
+         show:false
+       })
+     }
+render() {
  return(
-   <div>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">SIGN IN</button>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">CREATE ACCOUNT</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+  <Modal show={this.props.show} onHide={this.props.hide}>
+  <ModalHeader closeButton><h5>CREATE ACCOUNT</h5></ModalHeader>
+  <ModalBody>
           <form>
             <div class="form-group">
               
@@ -28,39 +38,27 @@ function Signin(){
         </div>
         <div class="form-group">
               
-               <input type="text" class="form-control" placeholder="E-mail"/>
+               <input type="email" class="form-control" placeholder="E-mail"/>
         </div>
         <div class="form-group">
               
-        <input type="text" class="form-control" placeholder="Password"/>
+        <input type="password" class="form-control" placeholder="Password"/>
        </div>
-       <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-      <label class="form-check-label" for="exampleCheck1">Remember me</label>
-  
+       <div class="form-group">
         <button type="submit" class="button">CREATE ACCOUNT</button>
       
           <p>OR</p>
           <button type="submit" class="btn1">CONNECT WITH FACEBOOK</button>
           <p>Already have an account?</p>
-             <p class="me">LOG IN</p>
+             <Link class="me" onClick={this.props.history.goBack()}>LOG IN</Link>
          </div>
              </form>
-       </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-   
-  )
+             </ModalBody>
+</Modal>
+  );
+
 }
 
-export default Signin
+
+}
+export default withRouter(Signin)

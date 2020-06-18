@@ -15,7 +15,7 @@ form{
     
 }
 
-input[type=text],input[type=password]{
+input[type=text],input[type=password],input[type=email]{
     width: 100%;
     padding: 20px;
     margin: 5px 0 22px 0;
@@ -72,8 +72,12 @@ p{
     text-align: center;
     color: #f68b1e;
     font-weight: bold;
+    position: relative;
+    left: 150px;
 }
-
-
-
+.me:hover{
+    opacity: 1;
+    color: #f68b1e!important;
+    text-decoration: none;
+}
 

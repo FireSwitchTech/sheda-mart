@@ -9,16 +9,11 @@ import Reflector from './img/reflector.jpg'
 import Rebel from './img/cam8.jpg'
 import Lens from './img/lens1.jpg'
 import Light from './img/light.jpg'
-<<<<<<< HEAD
-function Sheda() {
-    return(
-=======
 import Navbar from '../../navbar/navbar.js'
 function Sheda() {
     return(
       <div>
       <Navbar/>
->>>>>>> 7c1d59bd27ff48a4d272dd592f4f6e767ff62185
         <div>
      <h1 id="headcat">Photo<span id="graphy">graphy</span></h1>
     <div class="container-fluid">
@@ -106,10 +101,7 @@ function Sheda() {
 
             
         </div>
-<<<<<<< HEAD
-=======
         </div>
->>>>>>> 7c1d59bd27ff48a4d272dd592f4f6e767ff62185
     )
 }
 export default Sheda
