@@ -2,10 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Sheda from './Categories/Photo Category/Sheda'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
-    <Sheda />
+    <BrowserRouter>
+    <Switch>
+      <Route exact path= '/Sheda' component= {Sheda}/>
+
+    </Switch>
+    </BrowserRouter>
+    
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
