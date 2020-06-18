@@ -6,6 +6,8 @@ import Sheda from './Categories/Photo Category/Sheda'
 import Landing from './landing/landing'
 import Category from './category/category'
 
+
+
 function App() {
   return (
     <BrowserRouter>
