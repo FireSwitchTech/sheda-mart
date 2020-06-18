@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Login from '../login/login'
+import "./navbar.css"
 class Navbar extends Component {
   state = { 
     show:false
