@@ -26,7 +26,7 @@ function Sheda() {
             <p>Digital Video Camera Video Camcorder HD 1080P... 
                <h5>₦ 11,990</h5> </p>
                <button type="button" class="btn btn-primary btn-sm" id="orange">Add to cart</button>
-                <button type="button" class="btn btn-secondary btn-sm">Buy now</button>
+                <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>
           </div>
 
           <div class="col-sm-12 col-md-4">
