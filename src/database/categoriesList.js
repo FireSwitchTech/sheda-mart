@@ -9,7 +9,7 @@ const categoriesList =[
     {
         id:2,
         category_name:"Graphic Design",
-        img_url:require('../img/cam5.jpg'),
+        img_url:require('../img/graphics.jpg'),
         url:"/categories/Graphics-design"
     },
     {
@@ -34,16 +34,20 @@ const categoriesList =[
     {
         id:6,
         category_name:"Writing",
+        img_url:require('../img/writing.jpg'),
         url:"/catrgories/Writing"
     },
     {
         id:7,
         category_name:"Games",
+        img_url:require('../img/games.jpg'),
         url:"/categories/Games"
     },
     {
         id:7,
-        category_name:"Arts and Craft"
+        category_name:"Arts and Craft",
+        img_url:require('../img/art.jpg'),
+        url:"/categories/Arts and Craft"
     },
     
 ]

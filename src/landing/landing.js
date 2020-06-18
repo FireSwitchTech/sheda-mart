@@ -2,7 +2,7 @@ import React from 'react';
 import {Link } from 'react-router-dom'
 import categoriesList from '../database/categoriesList'
 import Navbar from '../navbar/navbar'
-// import Carousel from '../carousel/carousel'
+import Carousel from '../carousel/carousel'
 import './landing.css'
 const Landing = () => {
     const mystyle={
@@ -18,7 +18,7 @@ const Landing = () => {
     return ( 
         <div>
             <Navbar/>
-            {/* <Carousel/> */}
+             <Carousel/>
             <div className="container">
                 <div className="row">
                     
