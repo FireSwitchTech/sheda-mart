@@ -3,6 +3,9 @@ img{
     width: 200px;
     height: 200px;
     padding:20px;
-    background-color: transparent !important;
-    color:orangered
+    color:orange !important;
+}
+h5{
+    color: grey !important;
+    text-align: center;
 }
