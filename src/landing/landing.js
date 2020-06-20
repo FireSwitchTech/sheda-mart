@@ -4,6 +4,7 @@ import categoriesList from '../database/categoriesList'
 import Navbar from '../navbar/navbar'
 import Carousel from '../carousel/carousel'
 import './landing.css'
+import Footer from '../footer/footer'
 const Landing = () => {
     const mystyle={
         color:"red",
@@ -23,8 +24,10 @@ const Landing = () => {
                 <div className="row">
                     
                         {category}
+
                 </div>
             </div>
+            <Footer />
         </div>
      );
 }
