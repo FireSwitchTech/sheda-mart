@@ -9,8 +9,11 @@ import Reflector from './img/reflector.jpg'
 import Rebel from './img/cam8.jpg'
 import Lens from './img/lens1.jpg'
 import Light from './img/light.jpg'
+import Navbar from '../../navbar/navbar.js'
 function Sheda() {
     return(
+      <div>
+      <Navbar/>
         <div>
      <h1 id="headcat">Photo<span id="graphy">graphy</span></h1>
     <div class="container-fluid">
@@ -23,7 +26,7 @@ function Sheda() {
             <p>Digital Video Camera Video Camcorder HD 1080P... 
                <h5>₦ 11,990</h5> </p>
                <button type="button" class="btn btn-primary btn-sm" id="orange">Add to cart</button>
-                <button type="button" class="btn btn-secondary btn-sm">Buy now</button>
+                <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>
           </div>
 
           <div class="col-sm-12 col-md-4">
@@ -97,6 +100,7 @@ function Sheda() {
     </div>
 
             
+        </div>
         </div>
     )
 }

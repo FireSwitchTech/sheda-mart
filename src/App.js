@@ -1,16 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import Sheda from './Categories/Photo Category/Sheda'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Landing from './landing/landing'
+import Category from './category/category'
 
 function App() {
   return (
     <BrowserRouter>
-    <Switch>
-      <Route exact path= '/Sheda' component= {Sheda}/>
-
-    </Switch>
+      <Switch>
+        <Route exact path="/sheda" component={Sheda}/>
+        <Route exact path= "/" component={Landing}/>
+        <Route  path="/categories/:category_name" component={Category}/>
+      </Switch>
     </BrowserRouter>
     
     // <div className="App">
