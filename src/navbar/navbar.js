@@ -1,10 +1,12 @@
 import React from 'react';
 import "./navbar.css"
+import {Link} from 'react-router-dom'
+import logo from '../img/originallogo.png'
 
 const Navbar = () => {
     return ( 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">SHEDA MART</a>
+        <Link to="/" class="navbar-brand" ><img src={logo} class="img-responsive"></img></Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
