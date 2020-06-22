@@ -1,12 +1,27 @@
-import React from 'react';
+import React,{Component} from 'react';
+import {Link} from 'react-router-dom'
+import Login from '../login/login'
 import "./navbar.css"
-import {Link}  from "react-router-dom"
+import logo from '../img/originallogo.png'
 
-
-const Navbar = () => {
+class Navbar extends Component {
+  state = { 
+    show:false
+   }
+   showModal =()=>{
+     this.setState({
+       show:true
+     })
+   }
+   hideModal=()=>{
+     this.setState({
+       show:false
+     })
+   }
+  render() { 
     return ( 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">SHEDA MART</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <Link to="/" class="navbar-brand" ><img src={logo} class="img-responsive"></img></Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,7 +32,8 @@ const Navbar = () => {
               <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
+              <Link class="nav-link" onClick={this.showModal}>Log In</Link>
+              <Login show={this.state.show} hide={this.hideModal}/>
             </li>
 
             <li class="nav-item">
@@ -55,6 +71,7 @@ const Navbar = () => {
         </div>
       </nav>   
      );
+  }
 }
  
 export default Navbar;
