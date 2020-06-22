@@ -6,7 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery';
 import 'popper.js';
-
+import 'bootstrap/dist/js/bootstrap'
+import 'fontawesome'
 ReactDOM.render(
   <React.StrictMode>
     <App />

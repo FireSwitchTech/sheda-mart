@@ -1,0 +1,22 @@
+#headcat{
+    margin-left: 95px;
+    padding: 25px;
+}
+#orange{
+    color: white!important;
+    border: transparent 0px  !important;
+    background-color: orange !important;  
+    margin-right:10px !important;
+}
+#orange :hover{
+    border-color: black !important;
+}
+#graphy{
+    color: orange;
+}
+.btn-primary{
+    border-color: transparent!important;
+}
+.btn-secondary{
+    color: white!important;
+}
