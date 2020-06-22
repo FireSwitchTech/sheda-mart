@@ -39,6 +39,29 @@ class Navbar extends Component {
             <li class="nav-item">
               <a class="nav-link" href="#">Cart</a>
             </li>
+
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link to="/categories/photography">Photograghy</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/graphic design">Graphic Design</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/technology">Technology</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/catgories/music">Music</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/publishing">Publishing</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/writing">Writing</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/games">Games</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/arts and crafts">Arts and Crafts</Link>
+        </div>
+      </li>
             
               </ul>
           <form class="form-inline my-2 my-lg-0">
