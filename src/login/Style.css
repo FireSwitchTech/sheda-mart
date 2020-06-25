@@ -37,7 +37,7 @@ hr{
 
 .button{
     background-color:#f68b1e ;
-    color: white;
+    color: white!important;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -70,7 +70,7 @@ p{
 
 .me{
     text-align: center;
-    color: #f68b1e;
+    color: white;
     font-weight: bold;
     position: relative;
     left: 150px;

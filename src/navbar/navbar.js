@@ -6,7 +6,8 @@ import logo from '../img/originallogo.png'
 
 class Navbar extends Component {
   state = { 
-    show:false
+    show:false,
+    
    }
    showModal =()=>{
      this.setState({
@@ -18,7 +19,9 @@ class Navbar extends Component {
        show:false
      })
    }
+   
   render() { 
+    
     return ( 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/" class="navbar-brand" ><img src={logo} class="img-responsive"></img></Link>
@@ -37,7 +40,7 @@ class Navbar extends Component {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart</a>
+              <a class="nav-link" href="#">Cart ({this.props.update}) </a>
             </li>
 
             <li class="nav-item dropdown">
