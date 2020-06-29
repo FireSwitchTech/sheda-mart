@@ -10,44 +10,44 @@ const categoriesList =[
         id:2,
         category_name:"Graphic Design",
         img_url:require('../img/graphics.jpg'),
-        url:"/categories/Graphics-design"
+        url:"/categories/graphics-design"
     },
     {
         id:3,
         category_name:"Technology",
         img_url:require('../img/tech.jpg'),
-        url:"/categories/Technology"
+        url:"/categories/technology"
 
     },
     {
         id:4,
         category_name:"Music",
         img_url:require('../img/music.jpg'),
-        url:"/categories/Music"
+        url:"/categories/music"
     },
     {
         id:5,
         category_name:"Publishing",
         img_url:require('../img/graphic.jfif'),
-        url:"/categories/Publishing"
+        url:"/categories/publishing"
     },
     {
         id:6,
-        category_name:"Writing",
+        category_name:"writing",
         img_url:require('../img/writing.jpg'),
-        url:"/catrgories/Writing"
+        url:"/catrgories/writing",
     },
     {
         id:7,
         category_name:"Games",
         img_url:require('../img/games.jpg'),
-        url:"/categories/Games"
+        url:"/categories/games"
     },
     {
         id:7,
         category_name:"Arts and Craft",
         img_url:require('../img/art.jpg'),
-        url:"/categories/Arts and Craft"
+        url:"/categories/arts-and-craft"
     },
     
 ]
