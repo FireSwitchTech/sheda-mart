@@ -1,50 +1,65 @@
-import React from 'react';
+import React,{Component} from 'react';
+import {Link} from 'react-router-dom'
 import './category.css';
 import Navbar from '../navbar/navbar'
 import products from '../database/items'
 
-const Category = ({match}) => {
-    const groupProduct = products.filter(item=>
-         (item.category_name) == match.params.category_name
-         
-    );
-    const individaulItem =groupProduct.map(c=>{
-        return(
-
-          <div class="col-sm-12 col-md-4">
-            <img src={c.dp} alt="image" height="150" width="150" />
-            <p>{c.name}
-                <h5>₦{c.price}</h5> </p>
-               <button type="button" class="btn btn-primary btn-sm" id="orange">Add to cart</button>
-                <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>
-          </div>
-    
-        )
+class Category extends Component {
+    state = { 
+        cart:this.props.cart,
+        cartNo:this.props.cartNo
+     }
+     clickhandler(id){
+        const getIndividualprod = products.filter(d=>d.id==id)
         
-    })
-    const getfirst =()=>{
-         var first = match.params.category_name.slice(0,5)
-         return first
-    }
-    const getLast =()=>{
-        var last = match.params.category_name.slice(5)
-        return last
-   }
+          this.props.update(getIndividualprod[0])
+          console.log(this.props)
+     }
+     
+    render() { 
+        const groupProduct = products.filter(item=>
+            (item.category_name) == this.props.match.params.category_name
+            
+       );
    
+       const individaulItem =groupProduct.map(c=>{
+           return(
+             
+               <div className="col-xs-6 col-md-4">
+             <Link to={`${c.category_name}/${c.id}`}><img key={c.id} src={c.dp} alt="image" height="150" width="150" /></Link>
+              <Link to={`${c.category_name}/${c.id}`}><p>{c.name}</p></Link>
+               <h5 class= "description">₦{c.price}</h5> 
+               <button class="btn btn-primary btn-sm" id="orange" key={c.id} onClick={()=> this.clickhandler(c.id)}>Add to cart</button>
+               <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>
+             </div>
+           )
+          
+       })
+   
+       const getfirsthalf = () => {
+            var first=  this.props.match.params.category_name.slice(0,4)
+            return first
+       }
+   
+    const  getsecondthalf = () => {
+           var second=  this.props.match.params.category_name.slice(4)
+           return second
+      }
 
-    return ( 
-        <div>
-            <Navbar/>
-    <h1 id="headcat">{getfirst()}<span id="graphy">{getLast()}</span></h1>
-            <div class="container-fluid">
-                <div className="container">
-                    <div className="row">
-                    {individaulItem}
-                    </div>
-                </div>
+   
+        return ( 
+            <div>
+            <Navbar/>            
+    <h1 id="headcat">{getfirsthalf()}<span id="graphy">{getsecondthalf()}</span></h1>
+        <div className="container">
+            <div className="row">
+            {individaulItem}
             </div>
+            </div>
+            
         </div>
-     );
+         );
+    }
 }
  
 export default Category;

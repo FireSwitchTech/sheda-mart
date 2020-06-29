@@ -1,38 +1,43 @@
-import React from 'react';
+import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Sheda from './Categories/Photo Category/Sheda'
 import Landing from './landing/landing'
 import Category from './category/category'
+import Product from './product/product'
 
-function App() {
+
+
+class App extends Component {
+  state = { 
+    cart:[],
+    cartNo:0
+   }
+   update=(data)=>{
+     this.setState({
+       cart:data,
+       cartNo:this.state.cart.length
+       
+     })
+     
+   }
+  render(){
+    const getCartNo = this.state.cart.length
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/sheda" component={Sheda}/>
-        <Route exact path= "/" component={Landing}/>
-        <Route  path="/categories/:category_name" component={Category}/>
+    <Switch>
+        <Route exact path="/sheda" component={Sheda} />
+        <Route exact path= "/" render={(props) => (
+          <Landing {...props} update={this.update} />
+        )} />
+        <Route  exact path="/categories/:category_name" render={(props) => (
+          <Category {...props}  update={this.update}/>
+        )}/>
+        <Route exact path="/categories/:category_name/:id" component={Product}/>
       </Switch>
     </BrowserRouter>
-    
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
+  }
 }
-
 export default App;

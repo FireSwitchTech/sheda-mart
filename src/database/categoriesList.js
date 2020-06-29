@@ -35,13 +35,13 @@ const categoriesList =[
         id:6,
         category_name:"writing",
         img_url:require('../img/writing.jpg'),
-        url:"/catrgories/writing",
+        url:"/categories/writing",
     },
     {
         id:7,
         category_name:"Games",
         img_url:require('../img/games.jpg'),
-        url:"/categories/games"
+        url:"/categories/Gaming"
     },
     {
         id:7,

@@ -4,7 +4,8 @@ import categoriesList from '../database/categoriesList'
 import Navbar from '../navbar/navbar'
 import Carousel from '../carousel/carousel'
 import './landing.css'
-const Landing = () => {
+import Footer from '../footer/footer'
+const Landing = (props) => {
     const mystyle={
         color:"red",
     }
@@ -15,16 +16,19 @@ const Landing = () => {
             <Link to={c.url}><h5 style={mystyle}>{c.category_name}</h5></Link>
         </div>)
     })
+    console.log(props)
     return ( 
         <div>
-            <Navbar/>
+            <Navbar cartNo={props.cartNo}/>
              <Carousel/>
             <div className="container">
                 <div className="row">
                     
                         {category}
+
                 </div>
             </div>
+            <Footer />
         </div>
      );
 }
