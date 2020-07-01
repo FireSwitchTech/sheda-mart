@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Sheda from './Categories/Photo Category/Sheda'
 import Landing from './landing/landing'
 import Category from './category/category'
 import Product from './product/product'
+import Navbar from './navbar/navbar'
 
 
 
@@ -14,27 +14,27 @@ class App extends Component {
     cart:[],
     cartNo:0
    }
-   update=(data)=>{
-     this.setState({
-       cart:data,
-       cartNo:this.state.cart.length
-       
-     })
-     
+   updateParent =(data)=>{
+     this.state.cart.push(data)
+    this.setState({
+      cart:this.state.cart,
+      cartNo:this.state.cart.length
+    })
    }
   render(){
-    const getCartNo = this.state.cart.length
+    
   return (
     <BrowserRouter>
+    <Navbar cartNo={this.state.cartNo}/>
     <Switch>
         <Route exact path="/sheda" component={Sheda} />
         <Route exact path= "/" render={(props) => (
-          <Landing {...props} update={this.update} />
+          <Landing {...props}/>
         )} />
         <Route  exact path="/categories/:category_name" render={(props) => (
-          <Category {...props}  update={this.update}/>
+          <Category {...props} updateCart={this.updateParent}  cart={this.state.cart}/>
         )}/>
-        <Route exact path="/categories/:category_name/:id" component={Product}/>
+        <Route exact path="/categories/:category_name/:id" updateCart={this.updateParent} cart={this.state.cart} component={Product}/>
       </Switch>
     </BrowserRouter>
   );

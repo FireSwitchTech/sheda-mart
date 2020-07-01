@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link } from 'react-router-dom'
 import categoriesList from '../database/categoriesList'
-import Navbar from '../navbar/navbar'
 import Carousel from '../carousel/carousel'
 import './landing.css'
 import Footer from '../footer/footer'
@@ -19,9 +18,9 @@ const Landing = (props) => {
     console.log(props)
     return ( 
         <div>
-            <Navbar cartNo={props.cartNo}/>
              <Carousel/>
             <div className="container">
+                <h1 className="mt-4 mb-4">Categories</h1>
                 <div className="row">
                     
                         {category}

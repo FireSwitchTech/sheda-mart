@@ -19,7 +19,7 @@ class Product extends Component {
                     <div className='figma' style={{fontSize: "20px"}}><b>₦{Allproduct[0].price}</b></div>
                     <div className='bulma'><del>₦950,000</del></div>
             
-                    <button class="ray"><i style={{float: "left"}} class="fas fa-shopping-cart"></i> ADD TO CART</button>
+                    <button class="ray" ><i style={{float: "left"}} class="fas fa-shopping-cart"></i> ADD TO CART</button>
                 </div>
             </div>
        
