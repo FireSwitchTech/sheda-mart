@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import './category.css';
-import Navbar from '../navbar/navbar'
 import products from '../database/items'
 
 class Category extends Component {
@@ -11,9 +10,9 @@ class Category extends Component {
      }
      clickhandler(id){
         const getIndividualprod = products.filter(d=>d.id==id)
-        
-          this.props.update(getIndividualprod[0])
-          console.log(this.props)
+        console.log(getIndividualprod[0])
+         this.props.updateCart(getIndividualprod[0])
+          console.log(this.state.cart)
      }
      
     render() { 
@@ -48,8 +47,7 @@ class Category extends Component {
 
    
         return ( 
-            <div>
-            <Navbar/>            
+            <div>          
     <h1 id="headcat">{getfirsthalf()}<span id="graphy">{getsecondthalf()}</span></h1>
         <div className="container">
             <div className="row">

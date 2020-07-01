@@ -4,7 +4,6 @@ import './Style.css'
 import Modal from 'react-bootstrap/Modal'
 import ModalHeader from 'react-bootstrap/ModalHeader'
 import ModalBody from 'react-bootstrap/ModalBody'
-import Login from '../login/login'
 
 
 class Signin extends Component {

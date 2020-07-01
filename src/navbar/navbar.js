@@ -40,7 +40,7 @@ class Navbar extends Component {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart ({this.props.update}) </a>
+              <a class="nav-link" href="#"> Cart 🛒 ({this.props.cartNo}) </a>
             </li>
 
             <li class="nav-item dropdown">
