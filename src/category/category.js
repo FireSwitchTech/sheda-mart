@@ -2,6 +2,7 @@ import React from 'react';
 import './category.css';
 import Navbar from '../navbar/navbar'
 import products from '../database/items'
+import {Link} from 'react-router-dom'
 
 
 const Category = ({match}) => {
@@ -14,7 +15,7 @@ const Category = ({match}) => {
           
             <div className="col-xs-6 col-md-4">
             <img src={c.dp} alt="image" height="150" width="150" />
-            <p>{c.name}</p>
+            <Link to=""><p>{c.name}</p></Link>
             <h5 class= "description">₦{c.price}</h5> 
             <button type="button" class="btn btn-primary btn-sm" id="orange">Add to cart</button>
             <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>

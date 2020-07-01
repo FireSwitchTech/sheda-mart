@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Login from '../login/login'
 import "./navbar.css"
 import logo from '../img/originallogo.png'
+import addtocart from "../addtocart/addtocart"
 
 class Navbar extends Component {
   state = { 
@@ -37,7 +38,7 @@ class Navbar extends Component {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart</a>
+              <Link to={addtocart}  onClick={this.addToCart.bind(this)} class="nav-link" href="#">Cart</Link>
             </li>
             
               </ul>
