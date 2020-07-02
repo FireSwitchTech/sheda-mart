@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
-import Login from './login/login';
-import Signin from './signin/signin';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Sheda from './Categories/Photo Category/Sheda'
 import Landing from './landing/landing'
 import Category from './category/category'
+import Product from './product/product'
+import Navbar from './navbar/navbar'
 
 
 
-function App() {
+class App extends Component {
+  state = { 
+    cart:[],
+    cartNo:0
+   }
+   updateParent =(data)=>{
+     this.state.cart.push(data)
+    this.setState({
+      cart:this.state.cart,
+      cartNo:this.state.cart.length
+    })
+   }
+  render(){
+    
   return (
     <BrowserRouter>
+    <Navbar cartNo={this.state.cartNo}/>
     <Switch>
-      <Route exact path='/Login' component={Login}/>
-      <Route exact path='/signin' component={Signin}/>
-        <Route exact path="/sheda" component={Sheda}/>
-        <Route exact path= "/" component={Landing}/>
-        <Route  path="/categories/:category_name" component={Category}/>
+        <Route exact path="/sheda" component={Sheda} />
+        <Route exact path= "/" render={(props) => (
+          <Landing {...props}/>
+        )} />
+        <Route  exact path="/categories/:category_name" render={(props) => (
+          <Category {...props} updateCart={this.updateParent}  cart={this.state.cart}/>
+        )}/>
+        <Route exact path="/categories/:category_name/:id" updateCart={this.updateParent} cart={this.state.cart} component={Product}/>
       </Switch>
     </BrowserRouter>
   );
+  }
 }
 export default App;

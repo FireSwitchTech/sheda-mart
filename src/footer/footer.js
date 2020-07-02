@@ -9,9 +9,7 @@ const Footer = () => {
         <div class="col-md">
           <h5>Contact Us</h5>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet inventore ab, id accusantium aut rerum nulla veritatis praesentium quod soluta accusamus magni cupiditate distinctio adipisci perferendis natus perspiciatis repellendus molestiae!</p>
-         <span><i class="fab fa-1x fa-facebook"></i> <p>@SHEDA_MART</p></span>
          
-            <button>follow</button>
         </div>
         <div class="col-md">
           <h5>About Us</h5>

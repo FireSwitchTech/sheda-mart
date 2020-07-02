@@ -4,3 +4,6 @@ a{
 button{
     color: orange!important;
 }
+img{
+  padding: 0!important;  
+}

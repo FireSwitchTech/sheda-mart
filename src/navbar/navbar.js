@@ -1,13 +1,14 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Login from '../login/login'
-import "./navbar.css"
+import   "./navbar.css"
 import logo from '../img/originallogo.png'
-import addtocart from "../addtocart/addtocart"
+import addTocart from "../addtocart/addtocart"
 
 class Navbar extends Component {
   state = { 
-    show:false
+    show:false,
+    
    }
    showModal =()=>{
      this.setState({
@@ -19,7 +20,9 @@ class Navbar extends Component {
        show:false
      })
    }
+   
   render() { 
+    
     return ( 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/" class="navbar-brand" ><img src={logo} class="img-responsive"></img></Link>
@@ -38,8 +41,31 @@ class Navbar extends Component {
             </li>
 
             <li class="nav-item">
-              <Link to={addtocart}  onClick={this.addToCart.bind(this)} class="nav-link" href="#">Cart</Link>
+              <Link to="../addtocart/addtocart" class="nav-link" href="#"onClick={()=> this.clickhandler(product.id)}> Cart 🛒 ({this.props.cartNo}) </Link>
             </li>
+
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link to="/categories/photography">Photograghy</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/graphic design">Graphic Design</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/technology">Technology</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/catgories/music">Music</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/publishing">Publishing</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/writing">Writing</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/games">Games</Link>
+          <div class="dropdown-divider"></div>
+          <Link to="/categories/arts and crafts">Arts and Crafts</Link>
+        </div>
+      </li>
             
               </ul>
           <form class="form-inline my-2 my-lg-0">
