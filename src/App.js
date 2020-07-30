@@ -6,6 +6,8 @@ import Landing from './landing/landing'
 import Category from './category/category'
 import Product from './product/product'
 import Navbar from './navbar/navbar'
+import Paystack from './Paystack/paystack'
+
 
 
 
@@ -36,7 +38,11 @@ class App extends Component {
         )}/>
         <Route exact path="/categories/:category_name/:id" updateCart={this.updateParent} cart={this.state.cart} component={Product}/>
       </Switch>
+     
+      <Route exact path="/pay" component={Paystack} />
+      
     </BrowserRouter>
+    
   );
   }
 }
