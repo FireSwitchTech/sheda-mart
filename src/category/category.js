@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import './category.css';
+import Paystack from '../Paystack/paystack'
 import products from '../database/items'
+
 
 class Category extends Component {
     state = { 
@@ -29,7 +31,7 @@ class Category extends Component {
               <Link to={`${c.category_name}/${c.id}`}><p>{c.name}</p></Link>
                <h5 class= "description">₦{c.price}</h5> 
                <button class="btn btn-primary btn-sm" id="orange" key={c.id} onClick={()=> this.clickhandler(c.id)}>Add to cart</button>
-               <button type="button" class="btn btn-secondary btn-sm" >Buy now</button>
+            <Paystack/>
              </div>
            )
           
