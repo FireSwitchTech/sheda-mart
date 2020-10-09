@@ -4,7 +4,6 @@ import Navbar from '../navbar/navbar'
 import products from '../database/items'
 import {Link} from 'react-router-dom'
 
-
 const Category = ({match}) => {
     const groupProduct = products.filter(item=>
          (item.category_name) == match.params.category_name
