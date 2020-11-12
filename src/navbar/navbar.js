@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom'
 import Login from '../login/login'
-import "./navbar.css"
+import   "./navbar.css"
 import logo from '../img/originallogo.png'
+import addTocart from "../addtocart/addtocart"
 
 class Navbar extends Component {
   state = { 
@@ -40,7 +41,7 @@ class Navbar extends Component {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#"> Cart 🛒 ({this.props.cartNo}) </a>
+              <Link to="../addtocart/addtocart" class="nav-link" href="#"onClick={()=> this.clickhandler(product.id)}> Cart 🛒 ({this.props.cartNo}) </Link>
             </li>
 
             <li class="nav-item dropdown">
